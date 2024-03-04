@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function rand(){
+            var x = Math.random();
+            x = x*1000;
+            x = Math.round(x);
+            return x;
+        }
+        var n = rand();
+        var b = n.toString();
+        var a = "Randomly generated number:";
+        var result = a.concat(" ", n);
+
+        document.write(result);
+
+        if (b.length == 3){
+            var hundreds = b[0]*100;
+            var tens = b[1]*10;
+            var ones = b[2];
+        } else if (b.length == 2){
+            var tens = b[0]*10;
+            var ones = b[1];
+        } else {
+            var ones = b[0];
+        }
+        
+        var d = new Date();
+        document.write("\nBreakdown: "+ hundreds +","+ " " + tens +","+ " " + ones + " ");
+        document.write(d);
+    </script>
+</body>
+</html>
